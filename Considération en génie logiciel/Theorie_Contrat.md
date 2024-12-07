@@ -1,4 +1,4 @@
-# Semaine 7 : Contrat, Test Unitaire
+# Contrat
 
 ### Synthèse sur la **Théorie du Contrat**
 
@@ -334,14 +334,3 @@ Avec cette approche, le code est robuste, clair et facile à maintenir, tout en 
         - Service de notification : Vérification des états par les invariants.
 
 ---
-
-### **Résumé des ajouts possibles :**
-- Rôle détaillé des exceptions.
-- Désactivation des assertions en mode production.
-- Cas d’utilisation concrets et pertinence dans des projets complexes.
-- Précision sur la responsabilité client/fournisseur.
-- Automatisation des tests autour des contrats.
-- Documentation claire et explicite pour les méthodes.
-- Liens avec les concepts modernes et principes d'architecture.
-
-En intégrant ces éléments, ta couverture de la théorie du contrat sera encore plus exhaustive et applicable à des projets professionnels. 😊
