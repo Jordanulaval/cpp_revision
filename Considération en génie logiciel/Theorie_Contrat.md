@@ -79,6 +79,19 @@ void Personne::verifieInvariant() const {
     INVARIANT(!m_nom.empty());
 }
 ```
+### **Exemple :**
+Implémentation d'une méthode avec préconditions et postconditions :
+
+```cpp
+    void Personne::asgAdresse(const std::string& p_nouvelleAdresse)
+    {
+        PRECONDITION(!p_nouvelleAdresse.empty());
+        m_adresse = p_nouvelleAdresse;
+        POSTCONDITION(reqAdresse() == p_nouvelleAdresse);
+        INVARIANTS();
+    }
+
+```
 
 ---
 
@@ -238,6 +251,20 @@ Voici une procédure détaillée et optimisée pour implémenter la théorie du 
        INVARIANT(util::Date::validerDate(reqDateNaissance().reqJour(), reqDateNaissance().reqMois(), reqDateNaissance().reqAnnee()));
    }
    ```
+
+### **Exemple :**
+Implémentation d'une méthode avec préconditions et postconditions :
+```cpp
+    void Personne::asgAdresse(const std::string& p_nouvelleAdresse)
+    {
+        PRECONDITION(!p_nouvelleAdresse.empty());
+        m_adresse = p_nouvelleAdresse;
+        POSTCONDITION(reqAdresse() == p_nouvelleAdresse);
+        INVARIANTS();
+    }
+```
+### Contrat et méthode
+1. On implémente quand il y a changement, car elle assigne, mais pas dans les reqXXX(), seulement dans les asgXXX().
 
 ---
 
