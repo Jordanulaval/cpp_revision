@@ -1,2 +1,3 @@
-# cpp_revision
-Revision de mon cours de cpp
+# C++ Révision
+1. [Considération en genie logiciel](Considération en génie logiciel)
+2. 
