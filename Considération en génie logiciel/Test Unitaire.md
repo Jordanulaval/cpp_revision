@@ -60,7 +60,7 @@
 ### **Écrire un test unitaire simple**
 
 Voici une base pour un test unitaire :
-```cpp
+```c++
 TEST(NomDeLaSuiteDeTest, NomDuCasDeTest) {
     // Créer un objet à tester
     Candidat candidat("046 454 286", "Jordan", "Mathieu", "2635 Rue de la Picardie", dateNaissance, LIBERAL);
@@ -87,7 +87,7 @@ Les **fixtures** permettent de regrouper les configurations communes pour plusie
 ---
 
 #### **Exemple de Fixture**
-```cpp
+```c++
 class UnCandidat : public ::testing::Test {
 protected:
     util::Date f_dateNaissance{9, 2, 2003};
@@ -104,7 +104,7 @@ protected:
 ```
 
 #### **Test utilisant la Fixture**
-```cpp
+```c++
 TEST_F(UnCandidat, ReqPartiPolitique_appelNormal_retournePartiAssigne) {
     ASSERT_EQ(f_candidat.reqPartiPolitique(), LIBERAL);
 }
@@ -115,7 +115,7 @@ TEST_F(UnCandidat, ReqPartiPolitique_appelNormal_retournePartiAssigne) {
 ### **Exemples de tests variés**
 
 #### 1. **Test du constructeur avec entrées valides**
-```cpp
+```c++
 TEST(CandidatTest, ConstructorValidInputs) {
     util::Date dateNaissance(21, 02, 1997);
     Candidat candidat("046 454 286", "Jordan", "Mathieu", "2635 Rue de la Picardie", dateNaissance, LIBERAL);
@@ -129,7 +129,7 @@ TEST(CandidatTest, ConstructorValidInputs) {
 ```
 
 #### 2. **Test des invariants**
-```cpp
+```c++
 TEST(CandidatTest, Invariants) {
     util::Date dateNaissance(21, 02, 1997);
     Candidat candidat("046 454 286", "Jordan", "Mathieu", "2635 Rue de la Picardie", dateNaissance, LIBERAL);
@@ -144,7 +144,7 @@ TEST(CandidatTest, Invariants) {
 ```
 
 #### 3. **Test de la méthode `reqPersonneFormate`**
-```cpp
+```c++
 TEST(CandidatTest, ReqPersonneFormate) {
     util::Date dateNaissance(21, 02, 1997);
     Candidat candidat("046 454 286", "Jordan", "Mathieu", "2635 Rue de la Picardie", dateNaissance, LIBERAL);
