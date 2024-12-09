@@ -162,3 +162,4 @@ Destructeur de Vehicule : Toyota
     - Pour des programmes de longue durée ou gourmands en mémoire, une gestion efficace est indispensable.
 
 En résumé, bien gérer la mémoire en C++ est essentiel pour garantir la stabilité, la performance et la maintenabilité des programmes.
+
