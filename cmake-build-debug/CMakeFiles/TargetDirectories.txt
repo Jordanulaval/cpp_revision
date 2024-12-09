@@ -1,0 +1,3 @@
+C:/Users/Jardan/CLionProjects/cpp_revision/cmake-build-debug/CMakeFiles/cpp_revision.dir
+C:/Users/Jardan/CLionProjects/cpp_revision/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Jardan/CLionProjects/cpp_revision/cmake-build-debug/CMakeFiles/rebuild_cache.dir
