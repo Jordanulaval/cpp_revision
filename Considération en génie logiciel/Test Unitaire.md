@@ -170,3 +170,50 @@ TEST(CandidatTest, ReqPersonneFormate) {
 3. En combinant tests simples, assertions variées et tests fixtures, vous pouvez valider tous les aspects critiques de vos classes.
 
 Les prochaines étapes peuvent inclure des tests avancés pour des fonctionnalités complexes comme les pointeurs ou la gestion de mémoire. 😊
+
+
+### **Tester une class abstraite** 
+
+```c++
+#include "Personne.h"
+#include <gtest/gtest.h>
+#include "Date.h"
+#include "ContratException.h"
+
+using namespace elections;
+
+/**
+* \class PersonneConcretTest
+* \brief Classe concrète pour tester la classe abstraite Personne.
+  */
+  class PersonneConcretTest : public Personne
+  {
+  public:
+     PersonneConcretTest(const std::string& p_nas, const std::string& p_prenom,
+     const std::string& p_nom, const std::string& p_adresse,
+     const util::Date& p_dateNaissance)
+     : Personne(p_nas, p_prenom, p_nom, p_adresse, p_dateNaissance) {}
+
+     virtual std::unique_ptr<Personne> clone() const
+     {
+     return std::unique_ptr<PersonneConcretTest> (new PersonneConcretTest(*this));
+     };
+     
+     virtual std::string reqPersonneFormate() const
+     {
+     return Personne::reqPersonneFormate();
+     }
+  };
+
+  TEST(PersonneTest, constructorValideInputs)
+  {
+  util::Date dateNaissance(21, 02, 1997);
+  PersonneConcretTest jordan("046 454 286", "Jordan", "Mathieu", "2635 Rue de la Picardie", dateNaissance);
+
+  ASSERT_EQ(jordan.reqNas(), "046 454 286");
+  ASSERT_EQ(jordan.reqPrenom(), "Jordan");
+  ASSERT_EQ(jordan.reqNom(), "Mathieu");
+  ASSERT_EQ(jordan.reqAdresse(), "2635 Rue de la Picardie");
+  ASSERT_EQ(jordan.reqDateNaissance(), dateNaissance);
+  }
+```
