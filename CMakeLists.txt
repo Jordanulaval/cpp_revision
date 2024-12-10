@@ -10,4 +10,6 @@ add_executable(cpp_revision
     TP2/Source/Personne.cpp
         TP2/Source/Utilisation.cpp
         TP2/Source/Date.cpp
-        TP2/Source/ContratException.cpp)
+        TP2/Source/ContratException.cpp
+        TP2/Include/Candidat.h
+        TP2/Source/Candidat.cpp)
